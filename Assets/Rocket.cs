@@ -29,11 +29,12 @@ public class Rocket : MonoBehaviour
             if (!audioSource.isPlaying)
             {
                 audioSource.Play();
-            } else
-            {
-                audioSource.Stop();
-            }
+            } 
             
+        }
+        else
+        {
+            audioSource.Stop();
         }
 
         if (Input.GetKey(KeyCode.A))
