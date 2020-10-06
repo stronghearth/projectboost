@@ -7,10 +7,12 @@ public class Rocket : MonoBehaviour
 {
     // declare Rigid Body instance
     Rigidbody rigidBody;
+    AudioSource audioSource;
 
     void Start()
     {
         rigidBody = GetComponent<Rigidbody>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -24,6 +26,14 @@ public class Rocket : MonoBehaviour
         if (Input.GetKey(KeyCode.Space))
         {
             rigidBody.AddRelativeForce(Vector3.up);
+            if (!audioSource.isPlaying)
+            {
+                audioSource.Play();
+            } else
+            {
+                audioSource.Stop();
+            }
+            
         }
 
         if (Input.GetKey(KeyCode.A))
