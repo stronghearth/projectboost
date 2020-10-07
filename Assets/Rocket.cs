@@ -26,6 +26,11 @@ public class Rocket : MonoBehaviour
         Thrust();
     }
 
+    void OnCollisionEnter(Collision collision)
+    {
+        print("collided");
+    }
+
     private void Rotate()
     {
         rigidBody.freezeRotation = true;
