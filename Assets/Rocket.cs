@@ -23,12 +23,21 @@ public class Rocket : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Rotate();
-        Thrust();
+        if (state == State.Alive)
+        {
+            Rotate();
+            Thrust();
+        }
+        
     }
 
     void OnCollisionEnter(Collision collision)
     {
+        if (state != State.Alive)
+        {
+            return;
+        }
+
         switch (collision.gameObject.tag)
         {
             case "Friendly":
@@ -36,14 +45,20 @@ public class Rocket : MonoBehaviour
                 break;
             case "Finish":
                 state = State.LevelUp;
-                Invoke("LoadNextScene", 1f);
+                Invoke("LoadNextScene", 1f); // make time a parameter
                 break;
             default:
-                print("DEAD");
-                SceneManager.LoadScene(0);
+                print("OMG IT DEADLY");
+                state = State.Dying;
+                Invoke("RestartGameOnDeath", 1f); // make time a parameter
                 break;
         }
         
+    }
+
+    private void RestartGameOnDeath()
+    {
+        SceneManager.LoadScene(0);
     }
 
     private void LoadNextScene()
