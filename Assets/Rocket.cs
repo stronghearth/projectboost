@@ -11,6 +11,9 @@ public class Rocket : MonoBehaviour
     Rigidbody rigidBody;
     AudioSource audioSource;
 
+    enum State { Alive, Dying, LevelUp }
+    State state = State.Alive;
+
     void Start()
     {
         rigidBody = GetComponent<Rigidbody>();
@@ -32,9 +35,8 @@ public class Rocket : MonoBehaviour
                 //do nothing
                 break;
             case "Finish":
-                print("Finish");
-                SceneManager.LoadScene(1);
-
+                state = State.LevelUp;
+                Invoke("LoadNextScene", 1f);
                 break;
             default:
                 print("DEAD");
@@ -42,6 +44,11 @@ public class Rocket : MonoBehaviour
                 break;
         }
         
+    }
+
+    private void LoadNextScene()
+    {
+        SceneManager.LoadScene(1); //todo allow for more than a couple of levels
     }
 
     private void Rotate()
