@@ -419,7 +419,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 56
   m_CollisionDetection: 0
 --- !u!114 &1349869041
 MonoBehaviour:
@@ -433,7 +433,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: edf82d124fce76645868f9fdac67bfec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rcsThrust: 125
+  rcsThrust: 100
   mainThrust: 20
 --- !u!82 &1349869040
 AudioSource:
