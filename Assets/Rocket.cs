@@ -28,9 +28,9 @@ public class Rocket : MonoBehaviour
     {
         if (state == State.Alive)
         {
-            Rotate();
-            Thrust();
-        }
+            RespondToRotationInput();
+            RespondToThrustInput();
+        } //else if state == State.Dying (multiple plays of clip at once)
         
     }
 
@@ -48,11 +48,13 @@ public class Rocket : MonoBehaviour
                 break;
             case "Finish":
                 state = State.LevelUp;
+                audioSource.PlayOneShot(successSound);
                 Invoke("LoadNextScene", 1f); // make time a parameter
                 break;
             default:
                 print("OMG IT DEADLY");
                 state = State.Dying;
+                audioSource.PlayOneShot(explosionSound);
                 Invoke("RestartGameOnDeath", 1f); // make time a parameter
                 break;
         }
@@ -69,7 +71,7 @@ public class Rocket : MonoBehaviour
         SceneManager.LoadScene(1); //todo allow for more than a couple of levels
     }
 
-    private void Rotate()
+    private void RespondToRotationInput()
     {
         rigidBody.freezeRotation = true;
 
@@ -88,20 +90,24 @@ public class Rocket : MonoBehaviour
         rigidBody.freezeRotation = false;
     }
 
-    private void Thrust()
+    private void RespondToThrustInput()
     {
         if (Input.GetKey(KeyCode.Space))
         {
-            rigidBody.AddRelativeForce(Vector3.up * mainThrust);
-            if (!audioSource.isPlaying)
-            {
-                audioSource.Play();
-            }
-
+            ApplyThrust();
         }
         else
         {
             audioSource.Stop();
+        }
+    }
+
+    private void ApplyThrust()
+    {
+        rigidBody.AddRelativeForce(Vector3.up * mainThrust);
+        if (!audioSource.isPlaying)
+        {
+            audioSource.PlayOneShot(mainEngine);
         }
     }
 }
