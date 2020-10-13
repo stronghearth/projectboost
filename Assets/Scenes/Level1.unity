@@ -1561,18 +1561,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1349869041, guid: 03384a7ac22c46e4b965cd463ba8c823, type: 3}
-      propertyPath: mainEngine
-      value: 
-      objectReference: {fileID: 8300000, guid: a32a67318e980b14da26b17a197cbee9, type: 3}
-    - target: {fileID: 1349869041, guid: 03384a7ac22c46e4b965cd463ba8c823, type: 3}
-      propertyPath: explosionSound
-      value: 
-      objectReference: {fileID: 8300000, guid: 9b11c80bdd4d8e345aa0e2c05e0645cc, type: 3}
-    - target: {fileID: 1349869041, guid: 03384a7ac22c46e4b965cd463ba8c823, type: 3}
-      propertyPath: successSound
-      value: 
-      objectReference: {fileID: 8300000, guid: e4fa68e7bab0f774cb2edde8610d2ba1, type: 3}
+    - target: {fileID: 4100701605351818, guid: 03384a7ac22c46e4b965cd463ba8c823, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4100701605351818, guid: 03384a7ac22c46e4b965cd463ba8c823, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4100701605351818, guid: 03384a7ac22c46e4b965cd463ba8c823, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4100701605351818, guid: 03384a7ac22c46e4b965cd463ba8c823, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4100701605351818, guid: 03384a7ac22c46e4b965cd463ba8c823, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4100701605351818, guid: 03384a7ac22c46e4b965cd463ba8c823, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 03384a7ac22c46e4b965cd463ba8c823, type: 3}
 --- !u!1001 &1386575449

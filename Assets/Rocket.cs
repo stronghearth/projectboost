@@ -6,9 +6,14 @@ public class Rocket : MonoBehaviour
     //switches for the designer to manipulate
     [SerializeField] float rcsThrust = 100f;
     [SerializeField] float mainThrust = 20f;
-    [SerializeField] AudioClip mainEngine;
+
+    [SerializeField] AudioClip mainEngineSound;
     [SerializeField] AudioClip explosionSound;
     [SerializeField] AudioClip successSound;
+
+    [SerializeField] ParticleSystem exhaustParticles;
+    [SerializeField] ParticleSystem successParticles;
+    [SerializeField] ParticleSystem explosionParticles;
 
     // declare Rigid Body instance and audio source instance
     Rigidbody rigidBody;
@@ -47,18 +52,32 @@ public class Rocket : MonoBehaviour
                 //do nothing
                 break;
             case "Finish":
-                state = State.LevelUp;
-                audioSource.PlayOneShot(successSound);
-                Invoke("LoadNextScene", 1f); // make time a parameter
+                StartSuccessSequence();
                 break;
             default:
-                print("OMG IT DEADLY");
-                state = State.Dying;
-                audioSource.PlayOneShot(explosionSound);
-                Invoke("RestartGameOnDeath", 1f); // make time a parameter
+                StartDeathSequence();
                 break;
         }
         
+    }
+
+    
+    private void StartSuccessSequence()
+    {
+        state = State.LevelUp;
+        audioSource.Stop();
+        audioSource.PlayOneShot(successSound);
+        successParticles.Play();
+        Invoke("LoadNextScene", 1f); // make time a parameter
+    }
+
+    private void StartDeathSequence()
+    {
+        state = State.Dying;
+        audioSource.Stop();
+        audioSource.PlayOneShot(explosionSound);
+        explosionParticles.Play();
+        Invoke("RestartGameOnDeath", 1f); // make time a parameter
     }
 
     private void RestartGameOnDeath()
@@ -99,6 +118,7 @@ public class Rocket : MonoBehaviour
         else
         {
             audioSource.Stop();
+            exhaustParticles.Stop();
         }
     }
 
@@ -107,7 +127,8 @@ public class Rocket : MonoBehaviour
         rigidBody.AddRelativeForce(Vector3.up * mainThrust);
         if (!audioSource.isPlaying)
         {
-            audioSource.PlayOneShot(mainEngine);
+            audioSource.PlayOneShot(mainEngineSound);
         }
+        exhaustParticles.Play();
     }
 }
