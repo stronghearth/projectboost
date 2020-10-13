@@ -6,6 +6,9 @@ public class Rocket : MonoBehaviour
     //switches for the designer to manipulate
     [SerializeField] float rcsThrust = 100f;
     [SerializeField] float mainThrust = 20f;
+    [SerializeField] AudioClip mainEngine;
+    [SerializeField] AudioClip explosionSound;
+    [SerializeField] AudioClip successSound;
 
     // declare Rigid Body instance and audio source instance
     Rigidbody rigidBody;
@@ -33,7 +36,7 @@ public class Rocket : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
-        if (state != State.Alive)
+        if (state != State.Alive) //ignore collisions once a single collision is detected
         {
             return;
         }
