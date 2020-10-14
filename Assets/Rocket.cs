@@ -6,6 +6,7 @@ public class Rocket : MonoBehaviour
     //switches for the designer to manipulate
     [SerializeField] float rcsThrust = 100f;
     [SerializeField] float mainThrust = 20f;
+    [SerializeField] float levelLoadDelay = 1f;
 
     [SerializeField] AudioClip mainEngineSound;
     [SerializeField] AudioClip explosionSound;
@@ -68,7 +69,7 @@ public class Rocket : MonoBehaviour
         audioSource.Stop();
         audioSource.PlayOneShot(successSound);
         successParticles.Play();
-        Invoke("LoadNextScene", 1f); // make time a parameter
+        Invoke("LoadNextScene", levelLoadDelay); // make time a parameter
     }
 
     private void StartDeathSequence()
@@ -77,7 +78,7 @@ public class Rocket : MonoBehaviour
         audioSource.Stop();
         audioSource.PlayOneShot(explosionSound);
         explosionParticles.Play();
-        Invoke("RestartGameOnDeath", 1f); // make time a parameter
+        Invoke("RestartGameOnDeath", levelLoadDelay);
     }
 
     private void RestartGameOnDeath()
