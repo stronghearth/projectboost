@@ -242,7 +242,7 @@ PrefabInstance:
     - target: {fileID: 3049053356157297327, guid: 33800ec6f0c98dd44b470959224003d4,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.0185804
+      value: 32.4
       objectReference: {fileID: 0}
     - target: {fileID: 3049053356157297327, guid: 33800ec6f0c98dd44b470959224003d4,
         type: 3}
@@ -529,6 +529,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 33800ec6f0c98dd44b470959224003d4, type: 3}
+--- !u!1 &646605956 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3049053356157297323, guid: 33800ec6f0c98dd44b470959224003d4,
+    type: 3}
+  m_PrefabInstance: {fileID: 330966064}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &646605957
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 646605956}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b13251a74b19f0d4a9bd39a1685d41ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movementVector: {x: 0, y: -37, z: 0}
+  period: 4
+  moventFactor: 0
 --- !u!4 &658313420 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3049053356157297327, guid: 33800ec6f0c98dd44b470959224003d4,
@@ -1381,6 +1402,27 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 369818509}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1962842150 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3049053356157297323, guid: 33800ec6f0c98dd44b470959224003d4,
+    type: 3}
+  m_PrefabInstance: {fileID: 371505106}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1962842154
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1962842150}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b13251a74b19f0d4a9bd39a1685d41ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movementVector: {x: 0, y: 30, z: 0}
+  period: 4
+  moventFactor: 0
 --- !u!4 &2063719073 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3049053356157297327, guid: 33800ec6f0c98dd44b470959224003d4,
