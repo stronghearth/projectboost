@@ -237,12 +237,12 @@ PrefabInstance:
     - target: {fileID: 3049053356157297327, guid: 33800ec6f0c98dd44b470959224003d4,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.251373
+      value: -5.2
       objectReference: {fileID: 0}
     - target: {fileID: 3049053356157297327, guid: 33800ec6f0c98dd44b470959224003d4,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 32.4
+      value: 10.3
       objectReference: {fileID: 0}
     - target: {fileID: 3049053356157297327, guid: 33800ec6f0c98dd44b470959224003d4,
         type: 3}
@@ -288,6 +288,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3049053356157297327, guid: 33800ec6f0c98dd44b470959224003d4,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 5.9210324
+      objectReference: {fileID: 0}
+    - target: {fileID: 3049053356157297327, guid: 33800ec6f0c98dd44b470959224003d4,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 4.4151626
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 33800ec6f0c98dd44b470959224003d4, type: 3}
@@ -367,7 +377,7 @@ PrefabInstance:
     - target: {fileID: 3049053356157297327, guid: 33800ec6f0c98dd44b470959224003d4,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 22.149937
+      value: 13.294614
       objectReference: {fileID: 0}
     - target: {fileID: 3049053356157297327, guid: 33800ec6f0c98dd44b470959224003d4,
         type: 3}
@@ -451,7 +461,7 @@ PrefabInstance:
     - target: {fileID: 3049053356157297327, guid: 33800ec6f0c98dd44b470959224003d4,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 15.245516
+      value: 9.716882
       objectReference: {fileID: 0}
     - target: {fileID: 3049053356157297327, guid: 33800ec6f0c98dd44b470959224003d4,
         type: 3}
@@ -547,8 +557,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b13251a74b19f0d4a9bd39a1685d41ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementVector: {x: 0, y: -37, z: 0}
-  period: 4
+  movementVector: {x: 0, y: 0, z: -45}
+  period: 5
   moventFactor: 0
 --- !u!4 &658313420 stripped
 Transform:
@@ -594,7 +604,7 @@ PrefabInstance:
     - target: {fileID: 3049053356157297327, guid: 33800ec6f0c98dd44b470959224003d4,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -8.58631
+      value: -7.3
       objectReference: {fileID: 0}
     - target: {fileID: 3049053356157297327, guid: 33800ec6f0c98dd44b470959224003d4,
         type: 3}
@@ -644,7 +654,12 @@ PrefabInstance:
     - target: {fileID: 3049053356157297327, guid: 33800ec6f0c98dd44b470959224003d4,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 13.518166
+      value: 8.788836
+      objectReference: {fileID: 0}
+    - target: {fileID: 3049053356157297327, guid: 33800ec6f0c98dd44b470959224003d4,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 44.197315
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 33800ec6f0c98dd44b470959224003d4, type: 3}
@@ -868,6 +883,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 49.19159
+      objectReference: {fileID: 0}
+    - target: {fileID: 3049053356157297327, guid: 33800ec6f0c98dd44b470959224003d4,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 5.680047
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 33800ec6f0c98dd44b470959224003d4, type: 3}
@@ -1197,7 +1217,7 @@ PrefabInstance:
     - target: {fileID: 3049053356157297327, guid: 33800ec6f0c98dd44b470959224003d4,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 6.7553964
+      value: 3.0415497
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 33800ec6f0c98dd44b470959224003d4, type: 3}
@@ -1421,7 +1441,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementVector: {x: 0, y: 30, z: 0}
-  period: 4
+  period: 5
   moventFactor: 0
 --- !u!4 &2063719073 stripped
 Transform:

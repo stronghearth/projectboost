@@ -664,7 +664,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementVector: {x: 0, y: 40, z: 0}
-  period: 3
+  period: 5
   moventFactor: 0
 --- !u!1001 &613112292
 PrefabInstance:
@@ -2352,7 +2352,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementVector: {x: 0, y: -35, z: 0}
-  period: 3
+  period: 5
   moventFactor: 0
 --- !u!1001 &1168868551521735517
 PrefabInstance:
@@ -2576,22 +2576,22 @@ PrefabInstance:
     - target: {fileID: 4313984006245495386, guid: 120ac3592fe6e014fa7f57933a65cbd7,
         type: 3}
       propertyPath: m_BoundingSphereOverride.y
-      value: 7
+      value: 3.761582e-37
       objectReference: {fileID: 0}
     - target: {fileID: 4313984006245495386, guid: 120ac3592fe6e014fa7f57933a65cbd7,
         type: 3}
       propertyPath: m_BoundingSphereOverride.x
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4313984006245495386, guid: 120ac3592fe6e014fa7f57933a65cbd7,
         type: 3}
       propertyPath: m_BoundingSphereOverride.z
-      value: -9
+      value: 0.0000019076979
       objectReference: {fileID: 0}
     - target: {fileID: 4313984006245495386, guid: 120ac3592fe6e014fa7f57933a65cbd7,
         type: 3}
       propertyPath: m_BoundingSphereOverride.w
-      value: 7
+      value: 3.868563e+25
       objectReference: {fileID: 0}
     - target: {fileID: 4313984006245495387, guid: 120ac3592fe6e014fa7f57933a65cbd7,
         type: 3}
