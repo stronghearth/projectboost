@@ -41,9 +41,10 @@ public class Rocket : MonoBehaviour
             RespondToThrustInput();
         }
 
-
-        // todo only if dbug on
-        RespondToDebugKeys();
+        if (Debug.isDebugBuild)
+        {
+            RespondToDebugKeys();
+        }
         
     }
 
