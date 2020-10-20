@@ -107,7 +107,16 @@ public class Rocket : MonoBehaviour
 
     private void LoadNextScene()
     {
-        SceneManager.LoadScene(1); //todo allow for more than a couple of levels
+        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+        int nextSceneIndex = currentSceneIndex + 1;
+        if(nextSceneIndex == SceneManager.sceneCountInBuildSettings)
+        {
+            SceneManager.LoadScene(0);
+        } else
+        {
+            SceneManager.LoadScene(nextSceneIndex);
+        }
+        
     }
 
     private void RespondToRotationInput()
