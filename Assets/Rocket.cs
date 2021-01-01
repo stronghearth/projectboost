@@ -4,6 +4,7 @@ using UnityEngine.SceneManagement;
 
 public class Rocket : MonoBehaviour
 {
+   // Hello World
     //switches for the designer to manipulate
     [SerializeField] float rcsThrust = 100f;
     [SerializeField] float mainThrust = 20f;
