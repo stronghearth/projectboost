@@ -28,14 +28,22 @@ public class Rocket : MonoBehaviour
 
     void Start()
     {
-        rigidBody = GetComponent<Rigidbody>();
-        audioSource = GetComponent<AudioSource>();
+        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+        if (currentSceneIndex != 0) { 
+            rigidBody = GetComponent<Rigidbody>();
+            audioSource = GetComponent<AudioSource>();
+        }
+        else
+        {
+            audioSource = GetComponent<AudioSource>();
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (state == State.Alive)
+        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+        if (state == State.Alive && currentSceneIndex != 0)
         {
             RespondToRotationInput();
             RespondToThrustInput();
@@ -102,21 +110,27 @@ public class Rocket : MonoBehaviour
 
     private void RestartGameOnDeath()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(1);
     }
 
-    private void LoadNextScene()
+    public void LoadNextScene()
     {
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
         int nextSceneIndex = currentSceneIndex + 1;
-        if(nextSceneIndex == SceneManager.sceneCountInBuildSettings)
+        if (nextSceneIndex == SceneManager.sceneCountInBuildSettings)
         {
             SceneManager.LoadScene(0);
+            
         } else
         {
             SceneManager.LoadScene(nextSceneIndex);
         }
         
+    }
+
+    public void QuitGame()
+    {
+        Application.Quit();
     }
 
     private void RespondToRotationInput()
