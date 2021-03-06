@@ -109,7 +109,6 @@ public class Rocket : MonoBehaviour
     {
         state = State.LevelUp;
         audioSource.Stop();
-        bool didFunction = true;
         audioSource.volume = 1f;
 
         if (Level1 == SceneManager.GetActiveScene().name)
