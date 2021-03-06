@@ -2200,6 +2200,38 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1349869041, guid: 03384a7ac22c46e4b965cd463ba8c823, type: 3}
+      propertyPath: GemTrekExpl
+      value: 
+      objectReference: {fileID: 8300000, guid: be3e5240e7e629945b578bbd11af4f3c, type: 3}
+    - target: {fileID: 1349869041, guid: 03384a7ac22c46e4b965cd463ba8c823, type: 3}
+      propertyPath: GemTrekRocketEngine
+      value: 
+      objectReference: {fileID: 8300000, guid: a01a81ae9a5e7424c8e25c70065c6050, type: 3}
+    - target: {fileID: 1349869041, guid: 03384a7ac22c46e4b965cd463ba8c823, type: 3}
+      propertyPath: GemTrekVictoryD
+      value: 
+      objectReference: {fileID: 8300000, guid: ce9bad404f2fdbe4bb77b870d4b76cd6, type: 3}
+    - target: {fileID: 1349869041, guid: 03384a7ac22c46e4b965cd463ba8c823, type: 3}
+      propertyPath: GemTrekVictoryE
+      value: 
+      objectReference: {fileID: 8300000, guid: ec93b134a743fda48826b82fb33794e6, type: 3}
+    - target: {fileID: 1349869041, guid: 03384a7ac22c46e4b965cd463ba8c823, type: 3}
+      propertyPath: GemTrekVictoryF
+      value: 
+      objectReference: {fileID: 8300000, guid: 7dbbf046883f75e4d94e7b4a96a030c9, type: 3}
+    - target: {fileID: 1349869041, guid: 03384a7ac22c46e4b965cd463ba8c823, type: 3}
+      propertyPath: GemTrekVictoryG
+      value: 
+      objectReference: {fileID: 8300000, guid: 6ce47c331b0f7c145a94e2fc9e11ea8c, type: 3}
+    - target: {fileID: 1349869041, guid: 03384a7ac22c46e4b965cd463ba8c823, type: 3}
+      propertyPath: GemTrekVictoryA
+      value: 
+      objectReference: {fileID: 8300000, guid: 6537fba0956791f418562da6b80a186f, type: 3}
+    - target: {fileID: 1349869041, guid: 03384a7ac22c46e4b965cd463ba8c823, type: 3}
+      propertyPath: a
+      value: 
+      objectReference: {fileID: 2956222144798803153}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 03384a7ac22c46e4b965cd463ba8c823, type: 3}
 --- !u!1 &1514169155
@@ -3430,6 +3462,126 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c83ccb2b3373995499f0d416ec3c790c, type: 3}
+--- !u!1 &2956222144798803152 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2956222145715857854, guid: c83ccb2b3373995499f0d416ec3c790c,
+    type: 3}
+  m_PrefabInstance: {fileID: 2956222144798803151}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2956222144798803153
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2956222144798803152}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af1dc23c1fe47044ea20633e17374ebb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GemTrekLevel1: {fileID: 8300000, guid: deec572b43df3af4baf2238ac71e69a4, type: 3}
+  GemTrekLevel2: {fileID: 8300000, guid: 1bfea1bef1caf354792d334f3bf647b8, type: 3}
+  GemTrekLevel3: {fileID: 8300000, guid: 0126ed8fdc95c9f43bf9346906e98f0b, type: 3}
+  GemTrekLevel4: {fileID: 8300000, guid: 40fed290247122e45a323b20aaa67cba, type: 3}
+  GemTrekLevel5: {fileID: 8300000, guid: c7ffef61cb03c1a4188f80fd36cc7e45, type: 3}
+  Music: {fileID: 0}
+--- !u!82 &2956222144798803154
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2956222144798803152}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1001 &4313984005809078464
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3613,6 +3765,25 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5bfe77fcdfae8f2439aac2faaa0321f7, type: 3}
+--- !u!1 &4934895101799149451 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6072228009580990233, guid: 5bfe77fcdfae8f2439aac2faaa0321f7,
+    type: 3}
+  m_PrefabInstance: {fileID: 4934895101799149450}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &4934895101799149452
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4934895101799149451}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c166eef75f4d7fd4e8da6ad8eab53fec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  a: {fileID: 2956222144798803153}
 --- !u!1001 &6569773555886397937
 PrefabInstance:
   m_ObjectHideFlags: 0
