@@ -143,12 +143,13 @@ public class Rocket : MonoBehaviour
         audioSource.volume = 1f;
         audioSource.PlayOneShot(GemTrekExpl);
         explosionParticles.Play();
-        Invoke("RestartGameOnDeath", levelLoadDelay);
+        Invoke("RestartLevelOnDeath", levelLoadDelay);
     }
 
-    private void RestartGameOnDeath()
+    private void RestartLevelOnDeath()
     {
-        SceneManager.LoadScene(1);
+        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+        SceneManager.LoadScene(currentSceneIndex);
     }
 
     public void LoadNextScene()
