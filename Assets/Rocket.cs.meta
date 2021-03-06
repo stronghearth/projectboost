@@ -3,7 +3,13 @@ guid: edf82d124fce76645868f9fdac67bfec
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - mainEngineSound: {fileID: 8300000, guid: 1b01489f90bacee4296aacabd96a13b1, type: 3}
+  - explosionSound: {instanceID: 0}
+  - successSound: {fileID: 8300000, guid: 9c352e349e4099e488dead11fd446979, type: 3}
+  - exhaustParticles: {instanceID: 0}
+  - successParticles: {instanceID: 0}
+  - explosionParticles: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

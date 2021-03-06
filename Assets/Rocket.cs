@@ -1,17 +1,24 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class Rocket : MonoBehaviour
 {
+    
     //switches for the designer to manipulate
     [SerializeField] float rcsThrust = 100f;
     [SerializeField] float mainThrust = 20f;
-    [SerializeField] float levelLoadDelay = 1f;
+    [SerializeField] private static float levelLoadDelay = 2.0f;
 
-    [SerializeField] AudioClip mainEngineSound;
-    [SerializeField] AudioClip explosionSound;
-    [SerializeField] AudioClip successSound;
+    [SerializeField] AudioClip GemTrekRocketEngine;
+    [SerializeField] AudioClip GemTrekExpl;
+    [SerializeField] AudioClip GemTrekVictoryD;
+    [SerializeField] AudioClip GemTrekVictoryE;
+    [SerializeField] AudioClip GemTrekVictoryF;
+    [SerializeField] AudioClip GemTrekVictoryG;
+    [SerializeField] AudioClip GemTrekVictoryA;
 
     [SerializeField] ParticleSystem exhaustParticles;
     [SerializeField] ParticleSystem successParticles;
@@ -19,12 +26,22 @@ public class Rocket : MonoBehaviour
 
     // declare Rigid Body instance and audio source instance
     Rigidbody rigidBody;
-    AudioSource audioSource;
+    public AudioSource audioSource;
+    public Audio a;
+    
 
     enum State { Alive, Dying, LevelUp }
     State state = State.Alive;
 
     bool collisionsDisabled = false;
+   
+
+    //declare level scene names 
+    private readonly string Level1 = "Level1";
+    private readonly string Level2 = "Level2";
+    private readonly string Level3 = "Level3";
+    private readonly string Level4 = "Level4";
+    private readonly string Level5 = "Level5";
 
     void Start()
     {
@@ -49,11 +66,11 @@ public class Rocket : MonoBehaviour
             RespondToThrustInput();
         }
 
+
         if (Debug.isDebugBuild)
         {
             RespondToDebugKeys();
         }
-        
     }
 
     private void RespondToDebugKeys()
@@ -67,7 +84,7 @@ public class Rocket : MonoBehaviour
         }
     }
 
-    void OnCollisionEnter(Collision collision)
+     void OnCollisionEnter(Collision collision)
     {
         if (state != State.Alive || collisionsDisabled) //ignore collisions once a single collision is detected
         {
@@ -86,15 +103,35 @@ public class Rocket : MonoBehaviour
                 StartDeathSequence();
                 break;
         }
-        
     }
 
-    
-    private void StartSuccessSequence()
+     private void StartSuccessSequence()
     {
         state = State.LevelUp;
         audioSource.Stop();
-        audioSource.PlayOneShot(successSound);
+        bool didFunction = true;
+        audioSource.volume = 1f;
+
+        if (Level1 == SceneManager.GetActiveScene().name)
+        {
+            audioSource.PlayOneShot(GemTrekVictoryD, 1f);
+        }
+        else if (Level2 == SceneManager.GetActiveScene().name)
+        {
+            audioSource.PlayOneShot(GemTrekVictoryE, 1f);
+        }
+        else if (Level3 == SceneManager.GetActiveScene().name)
+        {
+            audioSource.PlayOneShot(GemTrekVictoryF, 1f);
+        }
+        else if (Level4 == SceneManager.GetActiveScene().name)
+        {
+            audioSource.PlayOneShot(GemTrekVictoryG, 1f);
+        }
+        else if (Level5 == SceneManager.GetActiveScene().name)
+        {
+            audioSource.PlayOneShot(GemTrekVictoryA, 1f);
+        }
         successParticles.Play();
         Invoke("LoadNextScene", levelLoadDelay); // make time a parameter
     }
@@ -103,7 +140,9 @@ public class Rocket : MonoBehaviour
     {
         state = State.Dying;
         audioSource.Stop();
-        audioSource.PlayOneShot(explosionSound);
+        a.StopMusic();
+        audioSource.volume = 1f;
+        audioSource.PlayOneShot(GemTrekExpl);
         explosionParticles.Play();
         Invoke("RestartGameOnDeath", levelLoadDelay);
     }
@@ -124,8 +163,25 @@ public class Rocket : MonoBehaviour
         } else
         {
             SceneManager.LoadScene(nextSceneIndex);
+        }  
+    }
+
+    public static class FadeAudioSource
+    {
+
+        public static IEnumerator StartFade(AudioSource audioSource, float duration, float targetVolume)
+        {
+            float currentTime = 0;
+            float start = audioSource.volume;
+
+            while (currentTime < duration)
+            {
+                currentTime += Time.deltaTime;
+                audioSource.volume = Mathf.Lerp(start, targetVolume, currentTime / duration);
+                yield return null;
+            }
+            yield break;
         }
-        
     }
 
     public void QuitGame()
@@ -154,24 +210,29 @@ public class Rocket : MonoBehaviour
 
     private void RespondToThrustInput()
     {
+
         if (Input.GetKey(KeyCode.Space))
         {
             ApplyThrust();
         }
-        else
+        if (Input.GetKeyDown(KeyCode.Space))
         {
-            audioSource.Stop();
+            audioSource.volume = 1f;
+            audioSource.clip = GemTrekRocketEngine;
+            audioSource.Play();
+            audioSource.loop = true;
+        }
+        else if (Input.GetKeyUp(KeyCode.Space))
+        {
+            StartCoroutine(FadeAudioSource.StartFade(audioSource, 0.01f, 0f));
             exhaustParticles.Stop();
+            audioSource.loop = false;
         }
     }
 
     private void ApplyThrust()
     {
         rigidBody.AddRelativeForce(Vector3.up * mainThrust);
-        if (!audioSource.isPlaying)
-        {
-            audioSource.PlayOneShot(mainEngineSound);
-        }
         exhaustParticles.Play();
-    }
+    }        
 }
