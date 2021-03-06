@@ -6689,10 +6689,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1349869041, guid: 03384a7ac22c46e4b965cd463ba8c823, type: 3}
-      propertyPath: GemTrekExpl
-      value: 
-      objectReference: {fileID: 8300000, guid: be3e5240e7e629945b578bbd11af4f3c, type: 3}
-    - target: {fileID: 1349869041, guid: 03384a7ac22c46e4b965cd463ba8c823, type: 3}
       propertyPath: GemTrekRocketEngine
       value: 
       objectReference: {fileID: 8300000, guid: a01a81ae9a5e7424c8e25c70065c6050, type: 3}
@@ -6720,6 +6716,10 @@ PrefabInstance:
       propertyPath: a
       value: 
       objectReference: {fileID: 2956222144798803153}
+    - target: {fileID: 1349869041, guid: 03384a7ac22c46e4b965cd463ba8c823, type: 3}
+      propertyPath: GemTrekExpl
+      value: 
+      objectReference: {fileID: 8300000, guid: 794a727720e41e940948dac253b95e40, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 03384a7ac22c46e4b965cd463ba8c823, type: 3}
 --- !u!1001 &1354960306

@@ -1586,10 +1586,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8300000, guid: 6537fba0956791f418562da6b80a186f, type: 3}
     - target: {fileID: 1349869041, guid: 03384a7ac22c46e4b965cd463ba8c823, type: 3}
-      propertyPath: GemTrekExpl
-      value: 
-      objectReference: {fileID: 8300000, guid: be3e5240e7e629945b578bbd11af4f3c, type: 3}
-    - target: {fileID: 1349869041, guid: 03384a7ac22c46e4b965cd463ba8c823, type: 3}
       propertyPath: GemTrekRocketEngine
       value: 
       objectReference: {fileID: 8300000, guid: a01a81ae9a5e7424c8e25c70065c6050, type: 3}
@@ -1621,6 +1617,10 @@ PrefabInstance:
       propertyPath: a
       value: 
       objectReference: {fileID: 1370202762}
+    - target: {fileID: 1349869041, guid: 03384a7ac22c46e4b965cd463ba8c823, type: 3}
+      propertyPath: GemTrekExpl
+      value: 
+      objectReference: {fileID: 8300000, guid: 794a727720e41e940948dac253b95e40, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 03384a7ac22c46e4b965cd463ba8c823, type: 3}
 --- !u!1 &1370202757 stripped
